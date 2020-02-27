@@ -1,0 +1,35 @@
+@import '../../../globalStyles/variables';
+@import '../../../globalStyles/mixins';
+
+header {
+  padding: 2%;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: $white;
+  z-index: 10;
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 2%;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
+    span {
+      color: red;
+    }
+  }
+}
+
+@media only screen and(min-width:1250px) {
+  header {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr;
+    h1 {
+      grid-column: 1/2;
+      grid-row: 1/-1;
+    }
+  }
+}

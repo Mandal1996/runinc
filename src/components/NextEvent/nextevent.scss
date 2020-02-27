@@ -1,0 +1,149 @@
+@import '../../globalStyles/variables';
+@import '../../globalStyles/mixins';
+.nextEventContainer {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr;
+  .nextEventImgContainer {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 25% 15% 60%;
+    .nextEventImg {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .nextEventImgTxt {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      background-color: $black;
+      text-align: end;
+      padding: 3% 10%;
+      p {
+        color: $white;
+        font-size: .9em;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .nextEventTxtContainer {
+    background-color: $yellow;
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    padding: 15% 8%;
+    h2 {
+      @include h2Styling;
+    }
+    h3 {
+      font-size: .7em;
+      margin-bottom: 3%;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: .6em;
+      margin-bottom: 7%;
+    }
+  }
+}
+@media only screen  and(min-width:374px) {
+  .nextEventContainer {
+    .nextEventImgContainer {
+      .nextEventImgTxt {
+        p {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+@media only screen and(min-width:424px) {
+  .nextEventContainer {
+    .nextEventImgContainer {
+      .nextEventImgTxt {
+        p {
+          font-size: 1.2em;
+        }
+      }
+    }
+    .nextEventTxtContainer {
+      height: 198px;
+    }
+  }
+}
+@media only screen and(min-width: 666px) {
+  .nextEventContainer {
+    .nextEventImgContainer {
+      .nextEventImgTxt {
+        p {
+          font-size: 2em;
+          margin-top: 1%;
+        }
+      }
+    }
+    .nextEventTxtContainer {
+      height: 100%;
+      h2 {
+        font-size: 1.5em;
+      }
+      h3 {
+        font-size: 1.4em;
+      }
+      p {
+        font-size: 1em;
+        margin-bottom: 15%;
+      }
+    }
+  }
+}
+@media only screen and(min-width: 767px) {
+  .nextEventContainer {
+    .nextEventImgContainer {
+      .nextEventImgTxt {
+        p {
+          font-size: 2em;
+          margin-top: 1%;
+        }
+      }
+    }
+    .nextEventTxtContainer {
+      height: 100%;
+      h2 {
+        font-size: 1.5em;
+      }
+      h3 {
+        font-size: 1.4em;
+      }
+      p {
+        font-size: 1em;
+        margin-bottom: 15%;
+      }
+    }
+  }
+}
+@media only screen and(min-width:1200px) {
+  .nextEventContainer {
+    .nextEventImgContainer {
+      .nextEventImgTxt {
+        p {
+          font-size: 3em;
+        }
+      }
+    }
+    .nextEventTxtContainer {
+      h2 {
+        font-size: 3.2em;
+      }
+      h3 {
+        font-size: 2.4em;
+      }
+      p {
+        font-size: 1.7em;
+      }
+    }
+  }
+}

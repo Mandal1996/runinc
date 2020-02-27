@@ -1,0 +1,74 @@
+@import '../../globalStyles/variables';
+@import '../../globalStyles/mixins';
+.minContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;  
+  .heroContainer {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  .txtContainer {
+    height: 48%;
+    background-color: $black;
+    grid-column: 2/-1;
+    grid-row: 3/4;
+    padding: 5% 5%;
+    p {
+      color: $white;
+      text-transform: uppercase;
+      font-size: .7em;
+      span {
+        color: $yellow;
+      }
+    }
+  }
+}
+@media only screen and(min-width: 374px)  {
+  .minContainer {
+    .txtContainer {
+      p {
+        font-size: .9em;
+      }
+    }
+  }
+}
+@media only screen and(min-width: 424px)  {
+  .minContainer {
+    .txtContainer {
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+}
+@media only screen and(min-width:666px) {
+  .minContainer {
+    .txtContainer {
+      p {
+        font-size: 1.4em;
+      }
+    }
+  }
+}
+@media only screen and(min-width: 767px) {
+  .minContainer {
+    .txtContainer {
+      p {
+        font-size: 1.6em;
+      }
+    }
+  }
+}
+@media only screen and(min-width: 1200px) {
+  .minContainer {
+    .txtContainer {
+      font-size: 2em;
+    }
+  }
+}

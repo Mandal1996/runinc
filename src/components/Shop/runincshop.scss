@@ -1,0 +1,221 @@
+@import '../../globalStyles/variables';
+@import '../../globalStyles/mixins';
+.shopContainer {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr;
+  .shopTxt {
+    background-color: $yellow;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    padding: 15% 10%;
+    h2 {
+      @include h2Styling;
+    }
+    h3 {
+      font-size: .6em;
+      font-weight: bold;
+      margin-bottom: 5%;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: .5em;
+      margin-bottom: 8%;
+    }
+    .freeDelivery {
+      margin-bottom: 15%;
+    }
+  }
+  .shopShoes {
+    grid-column: 2/-1;
+    grid-row: 1/1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+    .shopLabel {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      padding: 15%;
+      .blackShopLabel {
+        padding: 1% 4%;
+        width: 35%;
+        background-color: $black;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        h2 {
+          color: $white;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .shoesContainer {
+      grid-column: 1/-1;
+      grid-row: 2/-1;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 3%;
+      padding: 0 3% 20% 3%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .firstShoe {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        border: $shoeBorder;
+      }
+      .secondShoe {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        border: $shoeBorder;
+      }
+      .thirdShoe {
+        grid-column: 3/-1;
+        grid-row: 1/2;
+        border: $shoeBorder;
+      }
+      .fourthShoe {
+        grid-column: 1/2;
+        grid-row: 2/-1;
+        border: $shoeBorder;
+      }
+      .fiveShoe {
+        grid-column: 2/3;
+        grid-row: 2/-1;
+        border: $shoeBorder;
+      }
+      .sixShoe {
+        grid-column: 3/-1;
+        grid-row: 2/-1;
+        border: $shoeBorder;
+      }
+    }
+  }
+}
+@media only screen and(max-width: 560px) {
+  .shoesContainer {
+    p {
+      display: none
+    }
+  }
+}
+@media only screen and(min-width: 561px) {
+  .shoesContainer {
+    div {
+      text-align: center;
+      padding: 5%;
+      p {
+        font-size: .8em;
+      }
+    }
+  }
+}
+@media only screen and(min-width:374px) {
+  .shopContainer {
+    .shopTxt {
+      h2 {
+        font-size: 1em;
+      }
+      h3 {
+        font-size: .7em;
+      }
+      p {
+        font-size: .6em;
+      }
+    }
+  }
+}
+
+@media only screen and(min-width:424px) {
+  .shopContainer {
+    .shopTxt {
+      h2 {
+        font-size: 1.1em;
+      }
+      h3 {
+        font-size: .8em;
+      }
+      p {
+        font-size: .7em;
+      }
+    }
+  }
+}
+
+
+@media only screen and(min-width:666px) {
+  .shopContainer {
+    .shopTxt {
+      h2 {
+        font-size: 1.4em;
+      }
+      h3 {
+        font-size: 1.1em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+    .shopShoes {
+      .shoesContainer {
+        div {
+          padding: 5%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and(min-width:767px) {
+  .shopContainer {
+    .shopShoes {
+      .shopLabel {
+        .blackShopLabel {
+          h2 {
+            font-size: 1.4em;
+          }
+        }
+      }
+      .shoesContainer {
+        div {
+          padding: 5%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@media only screen and(min-width:1200px) {
+  .shopContainer {
+    .shopTxt {
+      h2 {
+        font-size: 3em;
+      }
+      h3 {
+        font-size: 2.7em;
+      }
+      p {
+        font-size: 2.2em;
+      }
+    }
+    .shopShoes {
+      .shopLabel {
+        .blackShopLabel {
+          h2 {
+            font-size: 3em;
+          }
+        }
+      }
+      .shoesContainer {
+        div {
+          p {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}

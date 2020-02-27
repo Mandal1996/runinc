@@ -1,0 +1,46 @@
+@import '../../../../globalStyles/variables';
+// used variables: => no variables yet <=
+
+nav {
+  display: inline;
+  ul {
+    display: inline;
+    li {
+      display: inline;
+      margin-left: 3%;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+        font-weight: bold;
+      }
+      .navbar_link {
+        text-decoration: none;
+        color: $black;
+      }
+      .navbar_link--active {
+        color: red;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media only screen and(min-width:1250px) {
+  nav {
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    ul {
+      li {
+        font-size: 1.8em;
+      }
+    }
+  }
+}
+@media only screen and(max-width:1000px) {
+  nav {
+    ul {
+      display: block;
+      margin-bottom: 2%;
+    }
+  }
+}

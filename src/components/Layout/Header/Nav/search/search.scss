@@ -1,0 +1,29 @@
+@import '../../../../../globalStyles/variables';
+@import '../../../../../globalStyles/mixins';
+
+.searchBar {
+  display: inline;
+  form {
+    display: inline;
+    margin-left: 4%;
+    input {
+      padding: 5px;
+      border: 1px solid $black;
+    }
+    input[type=search] {
+      background-color: yellow;
+    }
+    input[type=submit] {
+      background-color: $black;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}
+@media only screen and(max-width:650px) {
+  form {
+    input {
+      display: none;
+    }
+  }
+}
