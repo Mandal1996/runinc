@@ -1,5 +1,5 @@
 @import '../../../../globalStyles/variables';
-// used variables: => no variables yet <=
+@import '../../../../globalStyles/mixins';
 
 nav {
   display: inline;
@@ -25,13 +25,26 @@ nav {
   }
 }
 
+@media only screen and(min-width:650px) {
+  nav {
+    display: block;
+  }
+}
+
+
 @media only screen and(min-width:1250px) {
   nav {
     grid-column: 2/-1;
     grid-row: 1/-1;
+    margin-top: 1%;
+    display: inline;
     ul {
       li {
-        font-size: 1.8em;
+        margin-left: 7%;
+        font-size: 1.7em;
+        &:first-child {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -39,7 +52,6 @@ nav {
 @media only screen and(max-width:1000px) {
   nav {
     ul {
-      display: block;
       margin-bottom: 2%;
     }
   }

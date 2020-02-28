@@ -8,19 +8,16 @@ header {
   top: 0;
   background-color: $white;
   z-index: 10;
-  h1 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 2%;
-    cursor: pointer;
+  width: 100vw;
+  img {
+    transition: ease-in-out 0.4s;
+    width: 50%;
     &:hover {
-      opacity: 0.6;
-    }
-    span {
-      color: $red;
+      opacity: 0.5;
     }
   }
 }
+
 
 @media only screen and(min-width:1250px) {
   header {

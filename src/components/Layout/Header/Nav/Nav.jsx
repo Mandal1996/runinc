@@ -5,7 +5,7 @@ import Search from './search/Search';
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className="topnav" id="myTopnav">
       <ul>
         <li>
           <NavLink exact to="/" className="navbar_link" activeClassName="navbar_link--active">Home</NavLink>
