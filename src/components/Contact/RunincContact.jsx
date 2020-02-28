@@ -15,7 +15,7 @@ const RunincContact = () => {
           <input type="text" />
 
           <label htmlFor="Number">Telefonnr:</label>
-          <input type="text" />
+          <input type="number" />
 
           <label htmlFor="Message">Besked:</label>
           <textarea></textarea>
